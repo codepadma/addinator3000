@@ -1,22 +1,21 @@
 const add = require('./adder.js');
-//console.log(add(5, 1));
 class ViewManager {
   connectEventHandlers() {
-  	// wire up event handler for form submit
-  	
+  	document.getElementById('form-numbers')
+  	  .addEventListener(
+  	  	'submit', 
+  	  	this.onSubmit);
   }
 
   onSubmit(event) {
-  	// prevent page from submitting
+    event.preventDefault();
 
-  	// get the input numbers as strings
-
-  	// cast the string to integer
-
-  	// add the numbers
-  	
-  	// output
-
+    let num1 = document.getElementById('num1').value;
+    let num2 = document.getElementById('num2').value;
+    num1 = parseInt(num1, 10);
+    num2 = parseInt(num2, 10);
+    let sum = num1 + num2;
+    alert(sum);
   }
 }
 
