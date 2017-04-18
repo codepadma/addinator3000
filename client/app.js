@@ -4,7 +4,7 @@ class ViewManager {
   	document.getElementById('form-numbers')
   	  .addEventListener(
   	  	'submit', 
-  	  	this.onSubmit);
+  	  	this.onSubmit.bind(this));
   }
 
   onSubmit(event) {
@@ -15,7 +15,11 @@ class ViewManager {
     num1 = parseInt(num1, 10);
     num2 = parseInt(num2, 10);
     let sum = num1 + num2;
-    alert(sum);
+    this.renderSum(sum);
+  } 
+
+  renderSum(sum) {
+    document.querySelector('.sum').textContent = sum;
   }
 }
 

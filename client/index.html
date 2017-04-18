@@ -1,20 +1,25 @@
 <!DOCTYPE HTML>
 <html>
-  <body>
-  	<form id="form-numbers">
-  	  <div>
-  	    <label> Number1 </label>
-  	    <input id="num1" type="text" size="3"/>
-  	  </div>
-  	  <div>
-  	    <label> Number2 </label>
-  	    <input id="num2" type="text" size="3"/>
-  	  </div>
-  	  <div>
-  	    <input type="submit" value="Calculate!"/>
-  	  </div>
-  	</form>
-  	<script src="bundle.js"> </script>
-  </body>
+<head>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+ 	<form id="form-numbers">
+ 	  <div>
+ 	    <input id="num1" type="text" size="3" autocomplete="off"/>
+ 	  </div>
+ 	  <div>
+ 	    <input id="num2" type="text" size="3" autocomplete="off"/>
+ 	  </div>
+    <div>
+      <span class="sum"></span>
+    </div>
+  	<div>
+  	   <button>Calculate!</button>
+  	</div>
+  </form>
+  <script src="bundle.js"> </script>
+</body>
 </html>
 
