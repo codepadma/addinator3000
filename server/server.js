@@ -14,18 +14,19 @@ const server = http.createServer(function(request, response) {
   	  if (!doesExist) {
         response.statusCode = 404;
         response.end(`Resource does not exist: "${path}"`);
-  	  }
-  	  fs.readFile(filePath, (err, data) => {
-   	    if (err) {
-  	      response.statusCode = 500;
-          response.end(`Server error: "${err}"`);
-  	    } else {
-          response.end(data.toString('UTF-8'));
-  	    }
-      });
+  	  } else {
+  	    fs.readFile(filePath, (err, data) => {
+   	      if (err) {
+  	        response.statusCode = 500;
+            response.end(`Server error: "${err}"`);
+  	      } else {
+            response.end(data.toString('UTF-8'));
+  	      }
+        });
+  	  } 
     });
-});
   });
+});
   
 
 server.listen(port, function() {
