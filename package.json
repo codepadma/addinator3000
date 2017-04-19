@@ -5,7 +5,7 @@
   "main": "server/server.js",
   "scripts": {
     "postinstall": "browserify client/app.js -o client/bundle.js",
-    "start": "server/server.js"
+    "start": "node server/server.js"
   },
   "license": "MIT",
   "repository": {
