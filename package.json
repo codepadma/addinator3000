@@ -4,7 +4,7 @@
   "description": "Sample app to Add deployed to cloud",
   "main": "server/server.js",
   "scripts": {
-    "postinstall": "browserify client/app.js -o client/bundle.js"
+    "postinstall": "browserify client/app.js -o client/bundle.js",
     "start": "server/server.js"
   },
   "license": "MIT",
