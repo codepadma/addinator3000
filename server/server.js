@@ -1,7 +1,6 @@
 const http = require('http');
 const fs = require('fs');
 const url = require('url');
-const port = 3000;
 
 const server = http.createServer(function(request, response) {
   const path = url.parse(request.url).pathname;
@@ -29,6 +28,6 @@ const server = http.createServer(function(request, response) {
 });
   
 const PORT = process.env.PORT || 3000;
-server.listen(port, function() {
+server.listen(PORT, function() {
   console.log(`Server listening on port ${PORT}...`);
 });
